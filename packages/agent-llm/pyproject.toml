@@ -1,0 +1,62 @@
+[build-system]
+requires = [
+    "setuptools>=68",
+    "wheel",
+]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "agent-llm"
+version = "0.1.0"
+
+description = "Reusable LLM abstraction for AgentPlatform"
+
+readme = "README.md"
+
+requires-python = ">=3.12"
+
+dependencies = [
+    "pydantic>=2.0",
+]
+
+
+[project.optional-dependencies]
+
+openai = [
+    "openai>=1.0",
+]
+
+anthropic = [
+    "anthropic>=0.30",
+]
+
+gemini = [
+    "google-genai>=1.0",
+]
+
+groq = [
+    "groq>=0.30",
+]
+
+nvidia = [
+    "openai>=1.0",
+]
+
+dev = [
+    "pytest>=8.0",
+    "pytest-asyncio>=0.23",
+]
+
+all = [
+    "openai>=1.0",
+    "anthropic>=0.30",
+    "google-genai>=1.0",
+    "groq>=0.30",
+]
+
+
+[tool.setuptools.packages.find]
+
+where = ["src"]
+include = ["agent_llm*"]
