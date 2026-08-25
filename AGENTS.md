@@ -67,6 +67,30 @@ pip install -e .
 pytest  # run all tests
 ```
 
+### Versioning
+
+The project uses Git tags for version tracking. Current version information:
+
+- **v0.1.0** - Initial release tag (`d470d1408c39d2452aeb768e37969de0a835e322`)
+- **HEAD** - Points to latest commit on current branch
+- **dev** - Development branch
+- **main** - Main production branch
+
+### How to Create a Version Tag
+
+To create a new version tag, follow these steps:
+
+```bash
+# From project root
+cd packages/agent-llm
+
+# Create an annotated tag
+git tag -a v0.2.0 -m "Version 0.2.0 - <description of changes>"
+
+# Push the tag to remote
+git push origin v0.2.0
+```
+
 ### Directory Structure
 
 ```
