@@ -7,10 +7,11 @@ from agent_auth.models import CurrentUser
 
 def require_roles(
         *allowed_roles: str,
+    current_user_dependency: Callable,
     ) -> Callable:
 
     async def dependency(
-        current_user: CurrentUser = Depends(),
+            current_user: CurrentUser = Depends(current_user_dependency),
     ) -> CurrentUser:
 
         if current_user.role not in allowed_roles:

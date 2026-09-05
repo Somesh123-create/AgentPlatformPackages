@@ -150,3 +150,13 @@ packages/<package>/
 - Each package's `README.md` for detailed setup instructions
 - `pyproject.toml` for dependency management
 - Individual package docs for API reference
+
+
+git tag v1.0.0
+
+git tag -a v1.0.0 -m "Release version 1.0.0"
+
+git push origin v1.0.0
+
+
+git push origin --tags
